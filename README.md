@@ -1,0 +1,1 @@
+Automated build for the [totobgycs/archjava] docker image.
