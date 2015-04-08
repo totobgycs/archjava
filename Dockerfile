@@ -5,7 +5,7 @@ USER build
 RUN yaourt -Syy ; \
    yaourt -S --noconfirm xorg-server-common ttf-ubuntu-font-family ttf-freefont ; \
    yaourt -S --aur --noconfirm jdk  ; \
-   yaourt -S --noconfirm eclipse
+   yaourt -S --noconfirm eclipse maven
 
 USER root
 RUN useradd -m eclipse ; \
