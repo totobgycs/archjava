@@ -13,4 +13,6 @@ RUN useradd -m eclipse ; \
 
 WORKDIR /home/eclipse
 USER eclipse
+RUN  mkdir workspace
+VOLUME /home/eclipse/workspace
 
