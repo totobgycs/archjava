@@ -2,6 +2,7 @@ FROM totobgycs/archdev
 MAINTAINER totobgycs
 
 USER build
+ENV TERM xterm
 RUN yaourt -Syy ; \
    yaourt -S --noconfirm xorg-server-common ttf-ubuntu-font-family ttf-freefont ; \
    yaourt -S --aur --noconfirm jdk  ; \
