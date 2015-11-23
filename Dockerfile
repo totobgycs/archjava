@@ -6,7 +6,7 @@ ENV TERM xterm
 RUN yaourt -Syy ; \
    yaourt -S --noconfirm xorg-server-common ttf-ubuntu-font-family ttf-freefont ; \
    yaourt -S --aur --noconfirm jdk  ; \
-   yaourt -S --noconfirm eclipse maven
+   yaourt -S --noconfirm eclipse-java maven
 
 USER root
 RUN useradd -m eclipse ; \
