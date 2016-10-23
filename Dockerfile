@@ -1,19 +1,16 @@
-FROM totobgycs/archdev
+FROM totobgycs/archdevx11
 MAINTAINER totobgycs
 
 USER build
 ENV TERM xterm
 RUN yaourt -Syy ; \
-   yaourt -S --noconfirm xorg-server-common ttf-ubuntu-font-family ttf-freefont ; \
    yaourt -S --aur --noconfirm jdk  ; \
-   yaourt -S --noconfirm eclipse-java maven
+   yaourt -S --noconfirm eclipse-java maven ; \
+   yes | yaourt -Scc
 
-USER root
-RUN useradd -m eclipse ; \
-   echo 'eclipse ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
-
-WORKDIR /home/eclipse
-USER eclipse
+WORKDIR /home/guiuser
+USER guiuser
 RUN  mkdir workspace
-VOLUME /home/eclipse/workspace
+VOLUME /home/guiuser/workspace
+ENTRYPOINT eclipse
 
