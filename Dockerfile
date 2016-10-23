@@ -11,5 +11,5 @@ WORKDIR /home/guiuser
 USER guiuser
 RUN  mkdir workspace
 VOLUME /home/guiuser/workspace
-ENTRYPOINT eclipse
+CMD ["eclipse"]
 
