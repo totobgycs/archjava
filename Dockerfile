@@ -1,7 +1,6 @@
 FROM totobgycs/archdevx11
 MAINTAINER totobgycs
 
-USER build
 ENV TERM xterm
 RUN yaourt -Syy ; \
    yaourt -S --aur --noconfirm jdk  ; \

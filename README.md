@@ -5,5 +5,5 @@ Usage:
 
 ```
 $ xhost +si:localuser:guiuser
-$ docker run -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro totobgycs/archjava eclipse
+$ docker run -d -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro totobgycs/archjava
 ```
